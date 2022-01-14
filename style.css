@@ -7,3 +7,31 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+body{
+    padding: 0!important;
+    background-color: #9EBC9E;
+    font-family: 'Alfa Slab One', cursive;
+
+}
+#header{
+    background-image: url("assets/reverce.png") ;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-color: #9EBC9E;
+    /*color: white;*/
+    height: 300px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 60px;
+
+}
+button{
+    background-color: rgb(144,81,59) !important;
+    color: #f3d6c1  !important;
+}
+.addACoffe{
+    font-family: 'Alfa Slab One', cursive;
+    color: #6F4E37;
+}
+
+/*9EBC9E = cambrage blue */
+/*6F4E37 = coffee*/
