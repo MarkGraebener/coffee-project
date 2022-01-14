@@ -48,6 +48,17 @@ function updateCoffeesNames(e) {
     });
     display.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function addCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let newCoffee = document.getElementById("addCoffee");
+    let newRoast = document.getElementById("roastSelector2");
+    // coffees.push(`name: ${newCoffee} roast: ${newRoast}`)
+    Object.assign(coffees, {key3: "value3",name: newCoffee, roast: newRoast});
+    console.log(coffees);
+    display.innerHTML = renderCoffees();
+
+}
 //grab user input as they type
 //compair user input to coffe name
 // filter through coffee names for matching chars in input
@@ -78,6 +89,7 @@ let coffees = [
 
 let display = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
+let submitButton2 = document.querySelector('#submit2');
 let roastSelection = document.querySelector('#roast-selection');
 let coffeeName = document.querySelector("#coffeeName");
 
@@ -85,3 +97,4 @@ display.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 document.getElementById("coffeeName").addEventListener('keyup', updateCoffeesNames);
+submitButton2.addEventListener('click', addCoffee);
