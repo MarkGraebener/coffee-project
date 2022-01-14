@@ -1,7 +1,7 @@
 "use strict"
 //for each loop to find selected input
 function renderCoffee(coffee) {
-    var html = '<div class="col-6 my-3">';
+    let html = '<div class="col-6 my-3">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class="row border">'
     html += '<h3 class="col-8">' + coffee.name + '</h3>';
@@ -13,8 +13,8 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    let html = '';
+    for(let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -22,10 +22,10 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    console.log(selectedRoast)
-    var filteredCoffees = [];
-    console.log(filteredCoffees)
+    let selectedRoast = roastSelection.value;
+    // console.log(selectedRoast)
+    let filteredCoffees = [];
+    // console.log(filteredCoffees)
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -36,21 +36,30 @@ function updateCoffees(e) {
 
 function updateCoffeesNames(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedCoffee = coffeeName.value;
+    let selectedCoffee = coffeeName.value;
     console.log(selectedCoffee)
-    var filteredCoffees = [];
-    console.log(filteredCoffees)
+    let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name === selectedCoffee) {
+
+        if (coffee.name.includes(selectedCoffee)) {
             console.log(coffee)
             filteredCoffees.push(coffee);
         }
     });
     display.innerHTML = renderCoffees(filteredCoffees);
 }
+//grab user input as they type
+//compair user input to coffe name
+// filter through coffee names for matching chars in input
+
+//buttonElement.addEventListener('click', {
+//   handleEvent: function (event) {
+//     handleEvtOutput.textContent = 'Element clicked through handleEvent property!';
+//   }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -67,12 +76,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var display = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeName = document.querySelector("#coffeeName");
+let display = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
+let coffeeName = document.querySelector("#coffeeName");
 
 display.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', updateCoffeesNames);
+document.getElementById("coffeeName").addEventListener('keyup', updateCoffeesNames);
