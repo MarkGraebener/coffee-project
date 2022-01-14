@@ -22,17 +22,55 @@
     </div>
 <!--    forms-->
     <div class="col">
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <input id="submit" type="submit"/>
-        </form>
+        <div>
+<!--            <form>-->
+<!--                <label for="roast-selection"></label>-->
+<!--                <select id="roast-selection">-->
+<!--                    <option>light</option>-->
+<!--                    <option>medium</option>-->
+<!--                    <option>dark</option>-->
+<!--                </select>-->
+<!--                <div>-->
+<!--                <input id="submit" type="submit"/>-->
+<!--                </div>-->
+<!--            </form>-->
+            <form method="" action="">
+                <label for="roast-selection">Roasts</label>
+                <select class="form-control mt-3" id="roast-selection">
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <div class="form-group mb-3">
+                    <label for="coffeeName">Coffee Name</label>
+                    <input type="" class="form-control" id="coffeeName" placeholder="Coffee Name">
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+        <div>
+            <div>
+                <h2 class="text-center mt-4">Add a Coffee</h2>
+            </div>
+            <form method="" action="">
+                <label for="roastSelector2">Roasts</label>
+                <select class="form-control mt-3" id="roastSelector2">
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <div class="form-group mb-3">
+                    <label for="coffeeName2">Coffee Name</label>
+                    <input type="" class="form-control" id="coffeeName2" placeholder="Coffee Name">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
+
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

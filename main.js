@@ -1,5 +1,5 @@
 "use strict"
-
+//for each loop to find selected input
 function renderCoffee(coffee) {
     var html = '<div class="col-6 my-3">';
     // html += '<td>' + coffee.id + '</td>';
@@ -23,9 +23,26 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    console.log(selectedRoast)
     var filteredCoffees = [];
+    console.log(filteredCoffees)
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    display.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function updateCoffeesNames(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedCoffee = coffeeName.value;
+    console.log(selectedCoffee)
+    var filteredCoffees = [];
+    console.log(filteredCoffees)
+    coffees.forEach(function(coffee) {
+        if (coffee.name === selectedCoffee) {
+            console.log(coffee)
             filteredCoffees.push(coffee);
         }
     });
@@ -53,7 +70,9 @@ var coffees = [
 var display = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeName = document.querySelector("#coffeeName");
 
 display.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', updateCoffeesNames);
