@@ -25,13 +25,26 @@ body{
 
 }
 button{
-    background-color: rgb(144,81,59) !important;
+    background-color: #6F4E37 !important;
     color: #f3d6c1  !important;
 }
 .addACoffe{
     font-family: 'Alfa Slab One', cursive;
     color: #6F4E37;
 }
+
+#coffees{
+    color:#6F4E37;
+}
+
+p{
+    color:#f3d6c1;
+}
+
+label{
+    color:#6F4E37;
+}
+
 
 /*9EBC9E = cambrage blue */
 /*6F4E37 = coffee*/

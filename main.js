@@ -4,8 +4,9 @@ function renderCoffee(coffee) {
     let html = '<div class="col-5 my-3">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class="row ">'
-    html += '<h3 class="col-md-7">' + coffee.name + '</h3>';
-    html += '<p class="col-md-3  text-muted ">' + coffee.roast + '</p>';
+    html += '<h3 class="col-md-7 ">' + coffee.name + '</h3>';
+    html += '<div class="w-100"></div>'
+    html += '<p class="col-md-3">' + coffee.roast + '</p>';
     html += '</div>'
     html += '</div>';
 
