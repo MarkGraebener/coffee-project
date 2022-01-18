@@ -27,6 +27,7 @@ body{
 button{
     background-color: #6F4E37 !important;
     color: #f3d6c1  !important;
+    /*box-shadow: black;*/
 }
 .addACoffe{
     font-family: 'Alfa Slab One', cursive;
