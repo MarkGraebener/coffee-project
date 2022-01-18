@@ -11,7 +11,7 @@ body{
     padding: 0!important;
     background-color: #9EBC9E;
     font-family: 'Alfa Slab One', cursive;
-
+    /*background: linear-gradient(#a55317,#9EBC9E);*/
 }
 #header{
     background-image: url("assets/reverce.png") ;
@@ -31,6 +31,8 @@ button{
 .addACoffe{
     font-family: 'Alfa Slab One', cursive;
     color: #6F4E37;
+    -webkit-text-stroke: 1px #f3d6c1 ;
+
 }
 
 #coffees{
