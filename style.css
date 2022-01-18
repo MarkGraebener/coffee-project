@@ -35,14 +35,17 @@ button{
 
 #coffees{
     color:#6F4E37;
+    -webkit-text-stroke: 1px #f3d6c1;
 }
 
 p{
+    -webkit-text-stroke: 1px #6F4E37;
     color:#f3d6c1;
 }
 
 label{
     color:#6F4E37;
+    -webkit-text-stroke: 1px #f3d6c1;
 }
 
 
