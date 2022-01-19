@@ -12,21 +12,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container-fluid">
-<div class="header d-flex justify-content-center  mb-3 " id="header" >
-    <p class="mt-4 " style="color: #f3d6c1">COFFEE!</p>
-</div>
+<header class="mb-5" id="header">
+    <div class="header d-flex justify-content-center  mb-3 " id="">
+        <p class="mt-4 " style="color: #f3d6c1">COFFEE!</p>
+    </div>
+</header>
 <!--display coffees-->
-<div class="row px-2 mx-lg-5">
+<div class="row px-2 mx-lg-5 order-sm-2">
     <div class="col-lg order-sm-last order-lg-first">
         <div class="row">
-            <div class="display row" id="coffees">
+            <div class="display row d-flex justify-content-center" id="coffees">
             </div>
         </div>
     </div>
-<!--    forms-->
+    <!--    forms-->
     <div class="col-lg order-first mx-lg-5">
-        <div class="">
-            <form method="" action="">
+        <div class="roast-form border p-5">
+            <form class="" method="" action="">
                 <label for="roast-selection">Roasts</label>
                 <select class="form-control " id="roast-selection">
                     <option>All</option>
@@ -36,29 +38,35 @@
                 </select>
                 <div class="form-group my-3">
                     <label class="m" for="coffeeName">Coffee Name</label>
-                    <input type="" class="form-control" id="coffeeName" placeholder="Coffee Name"  >
+                    <input type="" class="form-control" id="coffeeName" placeholder="Coffee Name">
                 </div>
-                <button type="submit" id="submit" class="btn w-100">Submit</button>
+                <div class="button d-flex justify-content-center">
+                    <button type="submit" id="submit" class="btn ">Submit</button>
+                </div>
             </form>
         </div>
         <div>
             <div>
                 <h2 class="addACoffe text-center mt-4">Add a COFFEE!</h2>
             </div>
-            <form method="" action="">
-                <label for="roastSelector2">Roasts</label>
-                <select class="form-control" id="roastSelector2">
-                    <option>All</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <div class="form-group my-3">
-                    <label for="addCoffee">Coffee Name</label>
-                    <input type="" class="form-control" id="addCoffee" placeholder="Coffee Name">
-                </div>
-                <button type="submit" id="submit2" class="btn w-100">Submit</button>
-            </form>
+            <div class="roast-form border p-5">
+                <form method="" action="">
+                    <label for="roastSelector2">Roasts</label>
+                    <select class="form-control" id="roastSelector2">
+                        <option>All</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <div class="form-group my-3">
+                        <label for="addCoffee">Coffee Name</label>
+                        <input type="" class="form-control" id="addCoffee" placeholder="Coffee Name">
+                    </div>
+                    <div class="button d-flex justify-content-center">
+                        <button type="submit" id="submit2" class="btn ">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

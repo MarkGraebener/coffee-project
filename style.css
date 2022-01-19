@@ -9,7 +9,7 @@ td, th {
 }
 body{
     padding: 0!important;
-    background-color: #9EBC9E;
+    /*background-color: #9EBC9E;*/
     font-family: 'Alfa Slab One', cursive;
     /*background: linear-gradient(#a55317,#9EBC9E);*/
 }
@@ -17,7 +17,7 @@ body{
     background-image: url("assets/reverce.png") ;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    background-color: #9EBC9E;
+    /*background-color: #9EBC9E;*/
     /*color: white;*/
     height: 300px;
     font-family: 'Alfa Slab One', cursive;
@@ -28,7 +28,13 @@ button{
     background-color: #6F4E37 !important;
     color: #f3d6c1  !important;
     /*box-shadow: black;*/
+    width: 50%;
+    box-shadow: 5px 5px 5px #8d8888;
+
 }
+.button{
+}
+}}
 .addACoffe{
     font-family: 'Alfa Slab One', cursive;
     color: #6F4E37;
@@ -50,7 +56,11 @@ label{
     color:#6F4E37;
     -webkit-text-stroke: 1px #f3d6c1;
 }
-
+.roast-form{
+    border-radius: 20px;
+    background-color: #f3d6c1;
+    box-shadow: 5px 5px 5px #b3b0b0;
+}
 
 /*9EBC9E = cambrage blue */
 /*6F4E37 = coffee*/

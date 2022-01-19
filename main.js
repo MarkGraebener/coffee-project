@@ -1,12 +1,14 @@
 "use strict"
 //for each loop to find selected input
 function renderCoffee(coffee) {
-    let html = '<div class="col-5 my-3">';
+    let html = '<div class="col-5 my-3 d-flex justify-content-center">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class="row ">'
+    html += '<div class="col " <img src="./cuplogo.png" alt="">'
     html += '<h3 class="col-md-7 ">' + coffee.name + '</h3>';
     html += '<div class="w-100"></div>'
     html += '<p class="col-md-3">' + coffee.roast + '</p>';
+    html += '</div>'
     html += '</div>'
     html += '</div>';
 
